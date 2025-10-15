@@ -11,7 +11,7 @@ st.set_page_config(
 
 # --- DATA LOADING AND PREPARATION ---
 # Load the dataset from the CSV file.
-df = pd.read_csv("ecommerce_dataset_10000.xls - ecommerce_dataset_10000.csv")
+df = pd.read_csv("ecommerce_dataset_10000.csv")
 
 # Convert numeric Excel dates to datetime objects.
 df['order_date'] = pd.to_datetime(df['order_date'], unit='D', origin='1899-12-30')
@@ -103,4 +103,5 @@ with right_column:
     )
     fig_pie.update_layout(title_x=0.5)
     st.plotly_chart(fig_pie, use_container_width=True)
+
     
